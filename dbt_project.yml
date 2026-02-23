@@ -40,5 +40,7 @@ models:
     # Applies to all files under models/example/
     staging:
       +materialized: table
+      +schema: staging
     intermediate:
       +materialized: table
+      +schema: staging
