@@ -3,8 +3,8 @@
 SELECT
     o.ORDER_ID,
     o.CUSTOMER_ID,
-    c.CUSTOMER_CITY,
-    c.CUSTOMER_STATE,
+    c.CITY,
+    c.STATE,
     o.ORDER_PURCHASE_DATE
 FROM {{ ref('stg_order') }} o
 JOIN {{ ref('stg_customer') }} c
