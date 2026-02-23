@@ -1,11 +1,11 @@
 {{ config(materialized='table') }}
 
 SELECT
-    o.order_id,
-    o.customer_id,
-    c.city,
-    c.state,
-    o.order_purchase_timestamp
+    o.ORDER_ID,
+    o.CUSTOMER_ID,
+    c.CUSTOMER_CITY,
+    c.CUSTOMER_STATE,
+    o.ORDER_PURCHASE_TIMESTAMP
 FROM RETAIL_DWH.RAW.ORDERS o
 JOIN RETAIL_DWH.RAW.CUSTOMERS c
-ON o.customer_id = c.customer_id
+ON o.CUSTOMER_ID = c.CUSTOMER_ID
