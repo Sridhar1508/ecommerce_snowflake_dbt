@@ -1,5 +1,3 @@
-select * from raw.orders limit 10;
-
 {{ config(materialized='table') }}
 
 SELECT
