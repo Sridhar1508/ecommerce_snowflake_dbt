@@ -22,4 +22,4 @@ SELECT o.order_id,o.customer_id,c.city,c.state,o.order_status,p.payment_value as
     FROM stg_order o 
     LEFT JOIN {{ ref('stg_customer') }} c on o.customer_id = c.customer_id 
     LEFT JOIN {{ ref('stg_payments') }} p on o.order_id = p.order_id
-    LEFT JOIN {{ ref('stg_reviews') }} r on o.order_id = r.order_id;
+    LEFT JOIN {{ ref('stg_reviews') }} r on o.order_id = r.order_id
