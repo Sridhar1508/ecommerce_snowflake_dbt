@@ -1,3 +1,3 @@
 {{ config(materialized='table')}}
 
-SELECT * FROM RETAIL_DWH.RAW.SELLER
+SELECT * FROM RETAIL_DWH.RAW.SELLERS
