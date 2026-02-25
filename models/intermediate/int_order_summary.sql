@@ -16,7 +16,7 @@ Business Need:
 Create a dataset where each row represents one order with all important details combined.*/
 
 
-{{ config(materialized='table') }}
+{{ config(materialized='table', schema='intermediate') }}
 
 SELECT o.order_id,o.customer_id,c.city,c.state,o.order_status,p.payment_value as total_payment,r.review_score 
     FROM stg_order o 
